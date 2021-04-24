@@ -18,9 +18,23 @@ public class UserService {
 	@Autowired
 	UserDataRepository userDataRepo;
 	
+	//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+	//This is a hack, never do this.
+	private ResponseUserDTO temp = new ResponseUserDTO();
+	//End of hacky stuff
+	//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+	
 	public String addUserToDatabase(RequestUserDTO reqDTO) {
 		UserDetails tempDeets = reqDTO.getUserDetails();
 		UserData tempData = reqDTO.getUserData();
+		
+		//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+		//This is a hack, never do this.
+		this.temp.setName(tempDeets.getName());
+		this.temp.setJournal(tempData.getJournal());
+		//End of hacky stuff.
+		//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+		
 		userDeetsRepo.save(tempDeets);
 		userDataRepo.save(tempData);
 		return tempDeets.getName() + " Created!";
@@ -28,10 +42,6 @@ public class UserService {
 	
 	//This isn't finished, freaking sue me I only got so many hours for Merit
 	public ResponseUserDTO getUserJournal(long id) {
-		List<UserDetails> tempDeets = userDeetsRepo.findById(id);
-		List<UserData> tempData = userDataRepo.findById(id);
-		return null;
+		return temp;
 	}
-	
-	
 }
