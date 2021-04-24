@@ -26,6 +26,7 @@ public class UserService {
 		return tempDeets.getName() + " Created!";
 	}
 	
+	//This isn't finished, freaking sue me I only got so many hours for Merit
 	public ResponseUserDTO getUserJournal(long id) {
 		List<UserDetails> tempDeets = userDeetsRepo.findById(id);
 		List<UserData> tempData = userDataRepo.findById(id);
