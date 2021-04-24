@@ -10,17 +10,17 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.austinsweet.springexample.models.dto.RequestUserDTO;
 import com.austinsweet.springexample.models.dto.ResponseUserDTO;
-import com.austinsweet.springexample.repositories.UserDetailsRepository;
 import com.austinsweet.springexample.services.UserService;
 
 @RestController
 public class UserController {
+	
 	@Autowired 
 	private UserService service;
 	
 	@GetMapping("/")
 	@ResponseBody
-	 public String test() {
+	public String test() {
 		return "Hello World!";
 	}
 	

@@ -9,6 +9,7 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
+
 @Entity
 @Table(name = "user_details")
 public class UserDetails {
@@ -22,6 +23,7 @@ public class UserDetails {
 	private String email;
 	@Column(name = "user_password")
 	private String password;
+	
 	@OneToOne(cascade = CascadeType.ALL)
 	@JoinColumn(name = "data_id", referencedColumnName = "data_id")
 	private UserData userData;
