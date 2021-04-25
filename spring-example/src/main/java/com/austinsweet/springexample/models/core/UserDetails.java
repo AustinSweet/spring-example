@@ -5,7 +5,7 @@ public class UserDetails {
 	private String name;
 	private String email;
 	private String password;
-	private UserData userData;
+	private UserJournal userData;
 	
 	public UserDetails() {
 	}
@@ -49,11 +49,11 @@ public class UserDetails {
 		this.password = password;
 	}
 
-	public UserData getUserData() {
+	public UserJournal getUserData() {
 		return userData;
 	}
 
-	public void setUserData(UserData userData) {
+	public void setUserData(UserJournal userData) {
 		this.userData = userData;
 	}
 	

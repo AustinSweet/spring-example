@@ -5,7 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.austinsweet.springexample.models.core.UserData;
+import com.austinsweet.springexample.models.core.UserJournal;
 import com.austinsweet.springexample.models.core.UserDetails;
 import com.austinsweet.springexample.models.dto.RequestUserDTO;
 import com.austinsweet.springexample.models.dto.ResponseUserDTO;
@@ -13,9 +13,9 @@ import com.austinsweet.springexample.models.dto.ResponseUserDTO;
 @Service
 public class UserService {
 	private UserDetails detailStorage = new UserDetails();
-	private UserData dataStorage = new UserData();
+	private UserJournal dataStorage = new UserJournal();
 	
-	public String addUserToDatabase(RequestUserDTO reqDTO) {
+	public String addUser(RequestUserDTO reqDTO) {
 		this.detailStorage = reqDTO.getUserDetails();
 		this.dataStorage = reqDTO.getUserData();
 		return detailStorage.getName() + " Created!";

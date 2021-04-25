@@ -1,14 +1,14 @@
 package com.austinsweet.springexample.models.core;
 
-public class UserData {
+public class UserJournal {
 	private long id;
 	private String journal;
 	private UserDetails userDetails;
 	
-	public UserData() {
+	public UserJournal() {
 	}
 	
-	public UserData(String journal) {
+	public UserJournal(String journal) {
 		super();
 		this.journal = journal;
 	}

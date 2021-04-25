@@ -27,7 +27,7 @@ public class UserController {
 	@PostMapping("/users")
 	@ResponseBody
 	public String createUser(@RequestBody RequestUserDTO reqDTO) {
-		return service.addUserToDatabase(reqDTO);
+		return service.addUser(reqDTO);
 	}
 	
 	@GetMapping("/users/{id}/journal")

@@ -14,7 +14,7 @@ public class H2Testing {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long id;
 	@Column(name = "hello_world")
-	private String helloWorld = "Hey mom, I'm in a database!";
+	private String helloWorld = "Use me to check your connection to an H2 Database.";
 
 	public H2Testing() {
 	}
@@ -31,6 +31,4 @@ public class H2Testing {
 	public void setHelloWorld(String helloWorld) {
 		this.helloWorld = helloWorld;
 	}
-	
-	
 }

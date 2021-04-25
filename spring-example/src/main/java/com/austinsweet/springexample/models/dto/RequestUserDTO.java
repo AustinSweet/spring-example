@@ -1,16 +1,16 @@
 package com.austinsweet.springexample.models.dto;
 
-import com.austinsweet.springexample.models.core.UserData;
+import com.austinsweet.springexample.models.core.UserJournal;
 import com.austinsweet.springexample.models.core.UserDetails;
 
 public class RequestUserDTO {
 	private UserDetails userDetails;
-	private UserData userData;
+	private UserJournal userData;
 	
 	public RequestUserDTO() {
 	}
 
-	public RequestUserDTO(UserDetails userDetails, UserData userData) {
+	public RequestUserDTO(UserDetails userDetails, UserJournal userData) {
 		super();
 		this.userDetails = userDetails;
 		this.userData = userData;
@@ -24,11 +24,11 @@ public class RequestUserDTO {
 		this.userDetails = userDetails;
 	}
 
-	public UserData getUserData() {
+	public UserJournal getUserData() {
 		return userData;
 	}
 
-	public void setUserData(UserData userData) {
+	public void setUserData(UserJournal userData) {
 		this.userData = userData;
 	}
 	
