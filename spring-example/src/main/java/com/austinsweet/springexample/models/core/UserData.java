@@ -1,26 +1,8 @@
 package com.austinsweet.springexample.models.core;
 
-import javax.persistence.CascadeType;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.OneToOne;
-import javax.persistence.Table;
-
-@Entity
-@Table(name = "user_data")
 public class UserData {
-	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
-	@Column(name = "data_id")
 	private long id;
-	
-	@Column(name = "user_journal")
 	private String journal;
-	
-	@OneToOne(cascade = CascadeType.ALL)
 	private UserDetails userDetails;
 	
 	public UserData() {
